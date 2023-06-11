@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/question/question",
+    "pages/center/center"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "趣问",
+    "navigationBarBackgroundColor": "#ffe3cb",
+    "backgroundColor": "#ffe3cb"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./static/img/historical.png",
+        "selectedIconPath": "./static/img/historical.png"
+      },
+      {
+        "pagePath": "pages/question/question",
+        "text": "问答",
+        "iconPath": "./static/img/logo.png",
+        "selectedIconPath": "./static/img/logo.png"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "text": "个人中心",
+        "iconPath": "./static/img/me1.png",
+        "selectedIconPath": "./static/img/me2.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "tabbar": "/components/Tabbar/Tabbar"
+  }
+}

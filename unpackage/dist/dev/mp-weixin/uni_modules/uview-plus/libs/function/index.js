@@ -138,7 +138,7 @@ function deepMerge(target = {}, source = {}) {
 }
 function error(err) {
   {
-    console.error(`uView\u63D0\u793A\uFF1A${err}`);
+    console.error(`uView提示：${err}`);
   }
 }
 function randomArray(array = []) {
@@ -168,7 +168,7 @@ if (!String.prototype.padStart) {
 function timeFormat(dateTime = null, formatStr = "yyyy-mm-dd") {
   let date;
   if (!dateTime) {
-    date = new Date();
+    date = /* @__PURE__ */ new Date();
   } else if (/^\d{10}$/.test(dateTime.toString().trim())) {
     date = new Date(dateTime * 1e3);
   } else if (typeof dateTime === "string" && /^\d+$/.test(dateTime.trim())) {
@@ -180,11 +180,18 @@ function timeFormat(dateTime = null, formatStr = "yyyy-mm-dd") {
   }
   const timeSource = {
     "y": date.getFullYear().toString(),
+    // 年
     "m": (date.getMonth() + 1).toString().padStart(2, "0"),
+    // 月
     "d": date.getDate().toString().padStart(2, "0"),
+    // 日
     "h": date.getHours().toString().padStart(2, "0"),
+    // 时
     "M": date.getMinutes().toString().padStart(2, "0"),
+    // 分
     "s": date.getSeconds().toString().padStart(2, "0")
+    // 秒
+    // 有其他格式化字符需求可以继续添加，必须转化成字符串
   };
   for (const key in timeSource) {
     const [ret] = new RegExp(`${key}+`).exec(formatStr) || [];
@@ -197,32 +204,32 @@ function timeFormat(dateTime = null, formatStr = "yyyy-mm-dd") {
 }
 function timeFrom(timestamp = null, format = "yyyy-mm-dd") {
   if (timestamp == null)
-    timestamp = Number(new Date());
+    timestamp = Number(/* @__PURE__ */ new Date());
   timestamp = parseInt(timestamp);
   if (timestamp.toString().length == 10)
     timestamp *= 1e3;
-  let timer = new Date().getTime() - timestamp;
+  let timer = (/* @__PURE__ */ new Date()).getTime() - timestamp;
   timer = parseInt(timer / 1e3);
   let tips = "";
   switch (true) {
     case timer < 300:
-      tips = "\u521A\u521A";
+      tips = "刚刚";
       break;
     case (timer >= 300 && timer < 3600):
-      tips = `${parseInt(timer / 60)}\u5206\u949F\u524D`;
+      tips = `${parseInt(timer / 60)}分钟前`;
       break;
     case (timer >= 3600 && timer < 86400):
-      tips = `${parseInt(timer / 3600)}\u5C0F\u65F6\u524D`;
+      tips = `${parseInt(timer / 3600)}小时前`;
       break;
     case (timer >= 86400 && timer < 2592e3):
-      tips = `${parseInt(timer / 86400)}\u5929\u524D`;
+      tips = `${parseInt(timer / 86400)}天前`;
       break;
     default:
       if (format === false) {
         if (timer >= 2592e3 && timer < 365 * 86400) {
-          tips = `${parseInt(timer / (86400 * 30))}\u4E2A\u6708\u524D`;
+          tips = `${parseInt(timer / (86400 * 30))}个月前`;
         } else {
-          tips = `${parseInt(timer / (86400 * 365))}\u5E74\u524D`;
+          tips = `${parseInt(timer / (86400 * 365))}年前`;
         }
       } else {
         tips = timeFormat(timestamp, format);

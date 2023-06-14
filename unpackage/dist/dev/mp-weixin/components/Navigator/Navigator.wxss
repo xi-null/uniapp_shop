@@ -1,0 +1,37 @@
+
+.back_img {
+		width: 25rpx;
+		height: 40rpx;
+}
+.back_wrap {
+		margin-left: 44rpx;
+		padding-top: 33rpx;
+}
+.navigator_bar {
+		padding-top: 77rpx;
+		width: 750rpx;
+		height: 110rpx;
+		background-color: #ffe3cb;
+		opacity: 0.76;
+		display: flex;
+}
+.add_img {
+		width: 40rpx;
+		height: 38rpx;
+		margin-top: 35rpx;
+}
+.add_wrap {
+		margin-left: 44rpx;
+}
+.title_content {
+		width: 369rpx;
+		height: 56rpx;
+		margin-left: 221rpx;
+		padding-top: 27rpx;
+		font-size: 42rpx;
+		font-weight: normal;
+		font-stretch: normal;
+		line-height: 56rpx;
+		letter-spacing: 0rpx;
+		color: #ff9335;
+}

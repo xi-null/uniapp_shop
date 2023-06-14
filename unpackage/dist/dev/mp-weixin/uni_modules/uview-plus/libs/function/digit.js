@@ -17,7 +17,7 @@ function float2Fixed(num) {
 function checkBoundary(num) {
   {
     if (num > Number.MAX_SAFE_INTEGER || num < Number.MIN_SAFE_INTEGER) {
-      console.warn(`${num} \u8D85\u51FA\u4E86\u7CBE\u5EA6\u9650\u5236\uFF0C\u7ED3\u679C\u53EF\u80FD\u4E0D\u6B63\u786E`);
+      console.warn(`${num} 超出了精度限制，结果可能不正确`);
     }
   }
 }

@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperties(exports, { __esModule: { value: true }, [Symbol.toStringTag]: { value: "Module" } });
+Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const common_vendor = require("./common/vendor.js");
 const uni_modules_uviewPlus_index = require("./uni_modules/uview-plus/index.js");
 require("./uni_modules/uview-plus/libs/mixin/mixin.js");
@@ -122,6 +122,12 @@ if (!Math) {
   "./pages/index/index.js";
   "./pages/question/question.js";
   "./pages/center/center.js";
+  "./pages/history_orders/history_orders.js";
+  "./pages/child_information/child_information.js";
+  "./pages/Invitation_code/Invitation_code.js";
+  "./pages/motivate_invite/motivate_invite.js";
+  "./pages/report/report.js";
+  "./pages/feedback/feedback.js";
 }
 const _sfc_main = {
   onLaunch: function() {
@@ -134,7 +140,7 @@ const _sfc_main = {
     console.log("App Hide");
   }
 };
-const App = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "D:/\u524D\u7AEF/uni-app/uniapp_shop/App.vue"]]);
+const App = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "D:/projects/uniapp_shop/uniapp_shop/App.vue"]]);
 const Tababr = () => "./components/Tabbar/Tabbar.js";
 function createApp() {
   const app = common_vendor.createSSRApp(App);

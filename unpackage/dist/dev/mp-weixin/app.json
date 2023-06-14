@@ -2,7 +2,13 @@
   "pages": [
     "pages/index/index",
     "pages/question/question",
-    "pages/center/center"
+    "pages/center/center",
+    "pages/history_orders/history_orders",
+    "pages/child_information/child_information",
+    "pages/Invitation_code/Invitation_code",
+    "pages/motivate_invite/motivate_invite",
+    "pages/report/report",
+    "pages/feedback/feedback"
   ],
   "window": {
     "navigationBarTextStyle": "black",

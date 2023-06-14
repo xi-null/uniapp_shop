@@ -17,6 +17,7 @@ const uni_modules_uviewPlus_libs_function_platform = require("./libs/function/pl
 const $u = {
   route: uni_modules_uviewPlus_libs_util_route.route,
   date: uni_modules_uviewPlus_libs_function_index.index.timeFormat,
+  // 另名date
   colorGradient: uni_modules_uviewPlus_libs_function_colorGradient.colorGradient.colorGradient,
   hexToRgb: uni_modules_uviewPlus_libs_function_colorGradient.colorGradient.hexToRgb,
   rgbToHex: uni_modules_uviewPlus_libs_function_colorGradient.colorGradient.rgbToHex,
@@ -25,6 +26,7 @@ const $u = {
   type: ["primary", "success", "error", "warning", "info"],
   http: new uni_modules_uviewPlus_libs_luchRequest_core_Request.Request(),
   config: uni_modules_uviewPlus_libs_config_config.config,
+  // uView配置信息相关，比如版本号
   zIndex: uni_modules_uviewPlus_libs_config_zIndex.zIndex,
   debounce: uni_modules_uviewPlus_libs_function_debounce.debounce,
   throttle: uni_modules_uviewPlus_libs_function_throttle.throttle,

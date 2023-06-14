@@ -2,6 +2,7 @@
 const zIndex = {
   toast: 10090,
   noNetwork: 10080,
+  // popup包含popup，actionsheet，keyboard，picker的值
   popup: 10075,
   mask: 10070,
   navbar: 980,

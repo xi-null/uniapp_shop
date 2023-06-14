@@ -1,13 +1,14 @@
 "use strict";
 const DatetimePicker = {
+  // datetimePicker 组件
   datetimePicker: {
     show: false,
     showToolbar: true,
     value: "",
     title: "",
     mode: "datetime",
-    maxDate: new Date(new Date().getFullYear() + 10, 0, 1).getTime(),
-    minDate: new Date(new Date().getFullYear() - 10, 0, 1).getTime(),
+    maxDate: new Date((/* @__PURE__ */ new Date()).getFullYear() + 10, 0, 1).getTime(),
+    minDate: new Date((/* @__PURE__ */ new Date()).getFullYear() - 10, 0, 1).getTime(),
     minHour: 0,
     maxHour: 23,
     minMinute: 0,
@@ -16,8 +17,8 @@ const DatetimePicker = {
     formatter: null,
     loading: false,
     itemHeight: 44,
-    cancelText: "\u53D6\u6D88",
-    confirmText: "\u786E\u8BA4",
+    cancelText: "取消",
+    confirmText: "确认",
     cancelColor: "#909193",
     confirmColor: "#3c9cff",
     visibleItemCount: 5,

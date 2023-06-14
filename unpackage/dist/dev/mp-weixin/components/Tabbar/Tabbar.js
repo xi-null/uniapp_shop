@@ -14,19 +14,19 @@ const _sfc_main = {
       list: [
         {
           "pagePath": "/pages/index/index",
-          "text": "\u95EE\u548C\u7B54",
+          "text": "问和答",
           "iconPath": "../../static/img/QA1.svg",
           "selectedIconPath": "../../static/img/QA2.svg"
         },
         {
           "pagePath": "/pages/question/question",
-          "text": "\u8BED\u97F3\u95EE\u7B54",
+          "text": "语音问答",
           "iconPath": "../../static/img/logo.svg",
           "selectedIconPath": "../../static/img/logo.svg"
         },
         {
           "pagePath": "/pages/center/center",
-          "text": "\u6211\u7684",
+          "text": "我的",
           "iconPath": "../../static/img/me1.svg",
           "selectedIconPath": "../../static/img/me2.svg"
         }
@@ -57,5 +57,5 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   };
 }
-const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "D:/\u524D\u7AEF/uni-app/uniapp_shop/components/Tabbar/Tabbar.vue"]]);
+const Component = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "D:/projects/uniapp_shop/uniapp_shop/components/Tabbar/Tabbar.vue"]]);
 wx.createComponent(Component);

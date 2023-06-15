@@ -1,6 +1,5 @@
 "use strict";
 const Backtop = {
-  // backtop组件
   backtop: {
     mode: "circle",
     icon: "arrow-upward",

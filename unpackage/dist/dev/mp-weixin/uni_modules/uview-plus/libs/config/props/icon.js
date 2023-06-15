@@ -4,7 +4,6 @@ const {
   color
 } = uni_modules_uviewPlus_libs_config_config.config;
 const Icon = {
-  // icon组件
   icon: {
     name: "",
     color: color["u-content-color"],

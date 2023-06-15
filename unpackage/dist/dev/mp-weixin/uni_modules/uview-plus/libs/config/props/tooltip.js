@@ -1,6 +1,5 @@
 "use strict";
 const Tooltip = {
-  // tooltip 组件
   tooltip: {
     text: "",
     copyText: "",

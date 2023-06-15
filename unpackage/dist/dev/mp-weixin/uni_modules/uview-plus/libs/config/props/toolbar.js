@@ -1,10 +1,9 @@
 "use strict";
 const Toolbar = {
-  // toolbar 组件
   toolbar: {
     show: true,
-    cancelText: "取消",
-    confirmText: "确认",
+    cancelText: "\u53D6\u6D88",
+    confirmText: "\u786E\u8BA4",
     cancelColor: "#909193",
     confirmColor: "#3c9cff",
     title: ""

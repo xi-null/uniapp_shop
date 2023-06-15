@@ -89,7 +89,7 @@ const uni_modules_uviewPlus_libs_config_props_tooltip = require("./props/tooltip
 const uni_modules_uviewPlus_libs_config_props_transition = require("./props/transition.js");
 const uni_modules_uviewPlus_libs_config_props_upload = require("./props/upload.js");
 const uni_modules_uviewPlus_libs_config_props_drawer = require("./props/drawer.js");
-const props = {
+const defprops = {
   ...uni_modules_uviewPlus_libs_config_props_actionSheet.ActionSheet,
   ...uni_modules_uviewPlus_libs_config_props_album.Album,
   ...uni_modules_uviewPlus_libs_config_props_alert.Alert,
@@ -180,4 +180,4 @@ const props = {
   ...uni_modules_uviewPlus_libs_config_props_upload.Upload,
   ...uni_modules_uviewPlus_libs_config_props_drawer.drawer
 };
-exports.props = props;
+exports.defprops = defprops;

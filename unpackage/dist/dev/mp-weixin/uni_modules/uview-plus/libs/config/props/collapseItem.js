@@ -1,6 +1,5 @@
 "use strict";
 const CollapseItem = {
-  // collapseItem 组件
   collapseItem: {
     title: "",
     value: "",

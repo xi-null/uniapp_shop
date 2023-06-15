@@ -1,6 +1,5 @@
 "use strict";
 const Avatar = {
-  // avatar 组件
   avatar: {
     src: "",
     shape: "circle",

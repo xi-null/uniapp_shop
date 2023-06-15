@@ -1,6 +1,5 @@
 "use strict";
 const Tabs = {
-  //
   tabs: {
     duration: 300,
     list: () => [],

@@ -1,6 +1,5 @@
 "use strict";
 const Radio = {
-  // radio组件
   radio: {
     name: "",
     shape: "",

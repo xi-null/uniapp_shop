@@ -1,6 +1,5 @@
 "use strict";
 const Alert = {
-  // alert警告组件
   alert: {
     title: "",
     type: "warning",

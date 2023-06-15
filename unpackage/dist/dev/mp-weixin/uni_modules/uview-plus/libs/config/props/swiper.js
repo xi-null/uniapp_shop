@@ -1,6 +1,5 @@
 "use strict";
 const Swiper = {
-  // swiper 组件
   swiper: {
     list: () => [],
     indicator: false,

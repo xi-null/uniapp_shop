@@ -1,6 +1,5 @@
 "use strict";
 const Button = {
-  // button组件
   button: {
     hairline: false,
     type: "info",

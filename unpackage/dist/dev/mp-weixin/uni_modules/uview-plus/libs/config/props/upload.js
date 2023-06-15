@@ -1,6 +1,5 @@
 "use strict";
 const Upload = {
-  // upload组件
   upload: {
     accept: "image",
     capture: () => ["album", "camera"],

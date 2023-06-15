@@ -1,6 +1,5 @@
 "use strict";
 const ActionSheet = {
-  // action-sheet组件
   actionSheet: {
     show: false,
     title: "",

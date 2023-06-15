@@ -1,12 +1,11 @@
 "use strict";
 const Modal = {
-  // modal 组件
   modal: {
     show: false,
     title: "",
     content: "",
-    confirmText: "确认",
-    cancelText: "取消",
+    confirmText: "\u786E\u8BA4",
+    cancelText: "\u53D6\u6D88",
     showConfirmButton: true,
     showCancelButton: false,
     confirmColor: "#2979ff",

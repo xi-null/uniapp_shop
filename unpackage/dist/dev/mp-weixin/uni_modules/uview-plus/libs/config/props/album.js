@@ -1,6 +1,5 @@
 "use strict";
 const Album = {
-  // album 组件
   album: {
     urls: () => [],
     keyName: "",

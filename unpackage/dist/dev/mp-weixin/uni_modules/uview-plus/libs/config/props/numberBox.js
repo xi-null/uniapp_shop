@@ -1,6 +1,5 @@
 "use strict";
 const NumberBox = {
-  // 步进器组件
   numberBox: {
     name: "",
     value: 0,

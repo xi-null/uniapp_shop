@@ -1,6 +1,5 @@
 "use strict";
 const Slider = {
-  // slider组件
   slider: {
     value: 0,
     blockSize: 18,

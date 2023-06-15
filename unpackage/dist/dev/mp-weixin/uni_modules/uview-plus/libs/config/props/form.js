@@ -1,6 +1,5 @@
 "use strict";
 const Form = {
-  // form 组件
   form: {
     model: () => ({}),
     rules: () => ({}),

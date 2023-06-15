@@ -1,6 +1,5 @@
 "use strict";
 const ColumnNotice = {
-  // columnNotice 组件
   columnNotice: {
     text: "",
     icon: "volume",

@@ -1,6 +1,5 @@
 "use strict";
 const Keyboard = {
-  // 键盘组件
   keyboard: {
     mode: "number",
     dotDisabled: false,
@@ -15,8 +14,8 @@ const Keyboard = {
     show: false,
     overlay: true,
     zIndex: 10075,
-    cancelText: "取消",
-    confirmText: "确定",
+    cancelText: "\u53D6\u6D88",
+    confirmText: "\u786E\u5B9A",
     autoChange: false
   }
 };

@@ -42,6 +42,7 @@
       }
     ]
   },
+  "permission": {},
   "usingComponents": {
     "tabbar": "/components/Tabbar/Tabbar"
   }

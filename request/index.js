@@ -3,7 +3,10 @@
 uni.$u.http.setConfig((config) => {
     /* config 为默认全局配置*/
     // config.baseURL = 'https://www.example.com'; /* 根域名 */
-	config.baseURL = 'https://124.221.52.24:20235'
+	config.baseURL = 'http://124.221.52.24:20235'
+	config.header={
+		'Content-Type': 'application/x-www-form-urlencoded'
+	}
     return config
 })
 

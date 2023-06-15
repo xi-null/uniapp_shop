@@ -117,7 +117,7 @@
 		.first{
 			width: 680rpx;
 		     
-			   margin: 58rpx 35rpx 77rpx 35rpx ;
+			   margin: 58rpx 35rpx 30rpx 35rpx ;
 			    
 			height:130rpx;
 			display: flex;
@@ -197,9 +197,10 @@
 		}	
 			.list{
 				width: 692rpx;
-					height: 600rpx;
+					height: 1000rpx;
 					margin: auto;
 					overflow: scroll;
+					
 			}
 	}
 

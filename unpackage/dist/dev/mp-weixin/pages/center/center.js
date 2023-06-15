@@ -2,6 +2,7 @@
 const common_vendor = require("../../common/vendor.js");
 require("../../request/index.js");
 require("../../request/first.js");
+require("../../request/second.js");
 const _sfc_main = {
   onLoad() {
     console.log(1);

@@ -1,6 +1,9 @@
 <template>
 	<view class="list">
-		<view class="item" v-for="(item,key) in list">
+		<u-list
+		@scrolltolower="scrolltolower"
+				>
+		<u-list-item class="item" v-for="(item,key) in list">
 			<view class="question">
 				<view class="content">{{item.questionText}}</view>
 				<view class="time">{{item.askTime}}</view>
@@ -8,7 +11,8 @@
 			<view class="answer">
 				<view class="content">	{{item.answerText}}</view>
 			</view>
-		</view>
+		</u-list-item>
+		</u-list>
 	</view>
 </template>
 
@@ -23,6 +27,12 @@
 		},
 		mounted(){
 			console.log(this.list)
+		},
+		methods:{
+			scrolltolower(){
+				console.log('加载')
+				//通知父组件更新数据，展示组件仅负责展示
+			}
 		}
 		
 	}

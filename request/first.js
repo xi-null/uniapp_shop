@@ -12,6 +12,10 @@ export const getHttp = ()=>{
 /***
 	code：获取到微信的code
 ***/
+
 export const login = (data) => {
 	
 	return http.post('/api/user/login',{code:data})}
+
+
+

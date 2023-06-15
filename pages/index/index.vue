@@ -2,7 +2,7 @@
 	<view class="index_wra">
 		<view class="first">
 			<view class="left">
-			<view class="role" @click="show=true">
+			<view class="role" @click="show=true;selectIcon='../../static/img/go1.svg'">
 				 <view class="name">{{role}}</view>
 				  <view class="icon">	<image :src="selectIcon"></image></view>
 				  
@@ -10,13 +10,13 @@
 				 :columns="selectList"
 				 @confirm="confirm" 
 				 keyName="label"
-				 @cancel="show = false">
+				 @cancel="show = false;selectIcon='../../static/img/go2.svg'">
 				 </u-picker>					  
 			</view>
 				<view class="introduction">使用说明</view>
 			</view>
 			
-			<view class="right">
+			<view class="right" @click="scan">
 				<image src="../../static/img/scan.svg"></image>
 			</view>
 		</view>
@@ -45,8 +45,8 @@
 				selectIcon:'../../static/img/go2.svg', //图片路径
 				qaList:[{
                     "qaId": "string",
-                    "questionText": "string",
-                    "answerText": "string",
+                    "questionText": "阿斯顿撒旦阿萨大阿萨大撒赖扩大就撒旦卢卡斯离开洒家的立刻撒旦立刻爱上角度来看阿斯利康撒低级",
+                    "answerText": "阿斯顿金克拉阿斯兰的空间阿里山扩大啊离开洒家道路喀什的艰苦拉萨大家雷克萨角度来看撒阿",
                     "askTime": "string",
                     "answerTime": "string",
                     "hasError": true,
@@ -100,7 +100,21 @@
 				
 			},
 			confirm(e){
-				console.log(e)
+					console.log(e.value[0],'role')
+				this.selectIcon='../../static/img/go2.svg'
+				this.role = e.value[0].label
+				this.show = false
+			
+			},
+			//扫码功能
+			scan(){
+				uni.scanCode({
+					success: function (res) {
+						console.log('条码类型：' + res.scanType);
+						console.log('条码内容：' + res.result);
+					}
+				});
+
 			}
 			
 

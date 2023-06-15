@@ -29,12 +29,6 @@
         "selectedIconPath": "./static/img/historical.png"
       },
       {
-        "pagePath": "pages/question/question",
-        "text": "问答",
-        "iconPath": "./static/img/logo.png",
-        "selectedIconPath": "./static/img/logo.png"
-      },
-      {
         "pagePath": "pages/center/center",
         "text": "个人中心",
         "iconPath": "./static/img/me1.png",

@@ -12,7 +12,8 @@
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",
-                "enablePullDownRefresh": false
+                "enablePullDownRefresh": false,
+				"navigationStyle": "custom"
             }
             
         }
@@ -101,12 +102,6 @@
 	        "text": "首页",
 	        "iconPath": "./static/img/historical.png",
 	        "selectedIconPath": "./static/img/historical.png"
-	      },
-	      {
-	        "pagePath": "pages/question/question",
-	        "text": "问答",
-	        "iconPath": "./static/img/logo.png",
-	        "selectedIconPath": "./static/img/logo.png"
 	      },
 	      {
 	        "pagePath": "pages/center/center",

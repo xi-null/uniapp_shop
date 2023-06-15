@@ -24,5 +24,37 @@
 /* 透明度 */
 /* 文章场景相关 */
 .question_wra {
-  height: 90vh;
+  height: 88vh;
+  position: relative;
+  background-color: #f4f4f4;
+  overflow: hidden;
+}
+.question_wra .icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 146rpx;
+  align-items: center;
+  position: absolute;
+  bottom: 5vh;
+  left: 50%;
+  transform: translate(-50%);
+  height: 146rpx;
+}
+.question_wra .icon image {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 50%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.question_wra .icon .text {
+  font-family: Microsoft YaHei;
+  font-size: 18rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 19rpx;
+  letter-spacing: 0rpx;
+  color: #707070;
 }

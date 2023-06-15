@@ -38,6 +38,12 @@ const _sfc_main = {
       console.log("item", item);
       console.log("index", index);
       let url = item.pagePath;
+      if (index == 1) {
+        common_vendor.index.navigateTo({
+          url
+        });
+        return;
+      }
       common_vendor.index.switchTab({
         url
       });

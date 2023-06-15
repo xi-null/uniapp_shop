@@ -46,7 +46,12 @@
         console.log("item", item)
         console.log("index", index)
         let url = item.pagePath;
-
+	  if(index==1){
+		  uni.navigateTo({
+		  	url
+		  })
+		  return 
+	  }
         uni.switchTab({
             url
         })

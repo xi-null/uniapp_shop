@@ -1,9 +1,17 @@
 "use strict";
 const common_vendor = require("../../common/vendor.js");
+require("../../request/index.js");
+require("../../request/first.js");
 const _sfc_main = {
+  onLoad() {
+    console.log(1);
+    this.login();
+    this.nickName = common_vendor.index.getStorageSync("nickname");
+  },
   data() {
     return {
       selected: 2,
+      nickName: "",
       itemList: [
         { label: "个人历史订单", url: "/pages/history_orders/history_orders", imgUrl: "../../static/img/historical.svg" },
         { label: "已绑定子女", url: "/pages/child_information/child_information", imgUrl: "../../static/img/sondaughter.svg" },
@@ -19,6 +27,40 @@ const _sfc_main = {
       common_vendor.index.navigateTo({
         url: goUrl
       });
+    },
+    login() {
+      common_vendor.index.login({
+        "provider": "weixin",
+        "onlyAuthorize": true,
+        // 微信登录仅请求授权认证
+        success: function(event) {
+          console.log(event.code);
+          common_vendor.index.request({
+            header: {
+              "Content-Type": "application/x-www-form-urlencoded"
+            },
+            url: "http://124.221.52.24:20235/api/user/login",
+            data: {
+              code: event.code
+            },
+            method: "POST",
+            success: (res) => {
+              console.log(res);
+              common_vendor.index.setStorageSync("accessToken", res.data.item.accessToken);
+              common_vendor.index.setStorageSync("userId", res.data.item.userId);
+              common_vendor.index.setStorageSync("refreshToken", res.data.item.refreshToken);
+              common_vendor.index.setStorageSync("openid", res.data.item.openid);
+              common_vendor.index.setStorageSync("nickname", res.data.item.nickname);
+            },
+            fail() {
+              console.log("请求失败");
+            }
+          });
+        },
+        fail: function(err) {
+          console.log("登录失败");
+        }
+      });
     }
   }
 };
@@ -32,7 +74,8 @@ if (!Math) {
 }
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
-    a: common_vendor.f($data.itemList, (item, index, i0) => {
+    a: common_vendor.t($data.nickName),
+    b: common_vendor.f($data.itemList, (item, index, i0) => {
       return {
         a: item.imgUrl,
         b: common_vendor.t(item.label),
@@ -40,7 +83,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         d: item.index
       };
     }),
-    b: common_vendor.p({
+    c: common_vendor.p({
       selected: $data.selected
     })
   };

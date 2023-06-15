@@ -3,18 +3,32 @@ const common_vendor = require("../../common/vendor.js");
 const _sfc_main = {
   name: "Navigator",
   props: {
+    //页面标题
     title: {
+      type: String,
+      default: ""
+    },
+    // 该页面返回时候要跳转去的页面
+    backUrl: {
       type: String,
       default: ""
     }
   },
   data() {
     return {};
+  },
+  methods: {
+    //跳转回原来的页面
+    goBack() {
+      common_vendor.index.switchTab({
+        url: this.backUrl
+      });
+    }
   }
 };
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
-    a: common_vendor.o(($event) => _ctx.goBack()),
+    a: common_vendor.o(($event) => $options.goBack()),
     b: common_vendor.t($props.title)
   };
 }

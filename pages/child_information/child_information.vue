@@ -1,6 +1,6 @@
 <template>
 	<view class="child_information_wrap">
-		<Navigator :title="title"></Navigator>
+		<Navigator :title="title" :backUrl="backUrl"></Navigator>
 		<view v-for="item in childList">
 			<view class="title">
 				<view class="title_content">
@@ -28,6 +28,12 @@
 				</view>
 			</view>
 		</view>
+		<view class="add_wrap">
+			<img src="../../static/img/add.svg" alt="" class="add_img">
+			<view class="add_content">
+				添加
+			</view>
+		</view>
 	</view>
 </template>
 
@@ -39,7 +45,8 @@
 				//子女信息列表数组
 				childList:[
 					1,2
-				]
+				],
+				backUrl:'/pages/center/center'
 			}
 		},
 		methods: {
@@ -49,10 +56,15 @@
 </script>
 
 <style lang="scss">
+	.child_information_wrap {
+		background-color: #f8f8f8;
+		height: 100vh;
+	}
 	.title{
 		display: flex;
 		margin-top: 67rpx;
 		margin-left: 102rpx;
+		margin-bottom: 25rpx;
 	}
 	.title_content{
 		width: 212rpx;
@@ -89,5 +101,29 @@
 	}
 	.child_information_list > view {
 		margin-top: 25rpx;
+	}
+	.add_wrap {
+		width: 88rpx;
+		height: 88rpx;
+		margin-top: 200rpx;
+		margin-left: 331rpx;
+		border-radius: 50%;
+		background-color: #ffffff;	
+	}
+	.add_img {
+		width: 40rpx;
+		height: 40rpx;
+		margin-left: 23rpx;
+		margin-top: 23rpx;
+	}
+	.add_content {
+		width: 38rpx;
+		height: 27rpx;
+		margin-left: 24rpx;
+		padding-top: 24rpx;
+		font-size: 19rpx;
+		line-height: 27rpx;
+		letter-spacing: 0rpx;
+		color: #707070;
 	}
 </style>

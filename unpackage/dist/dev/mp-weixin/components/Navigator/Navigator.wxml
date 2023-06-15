@@ -1,1 +1,1 @@
-<view class="navigator_wrap"><view class="navigator_bar"><view class="back_wrap"><image src="/static/img/back.svg" alt="" class="back_img" bindtap="{{a}}"></image></view><view class="title_content">{{b}}</view><view class="add_wrap"><image src="/static/img/add.svg" alt="" class="add_img"></image></view></view></view>
+<view class="navigator_wrap"><view class="navigator_bar"><view class="back_wrap"><image src="/static/img/back.svg" alt="" class="back_img" bindtap="{{a}}"></image></view><view class="title_content">{{b}}</view></view></view>

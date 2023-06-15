@@ -7,9 +7,6 @@
 			<view class="title_content">
 				{{title}}
 			</view>
-			<view class="add_wrap">
-				<img src="../../static/img/add.svg" alt="" class="add_img">
-			</view>
 		</view>	
 	</view>
 </template>
@@ -18,7 +15,13 @@
 	export default {
 		name:"Navigator",
 		props: {
+			//页面标题
 		  title:{
+			  type:String,
+			  default:""
+		  },
+		  // 该页面返回时候要跳转去的页面
+		  backUrl:{
 			  type:String,
 			  default:""
 		  }
@@ -27,6 +30,14 @@
 			return {
 				
 			};
+		},
+		methods:{
+			//跳转回原来的页面
+			goBack(){
+				uni.switchTab({
+					url: this.backUrl
+				});
+			}
 		}
 	}
 </script>

@@ -9,7 +9,8 @@ const _sfc_main = {
       childList: [
         1,
         2
-      ]
+      ],
+      backUrl: "/pages/center/center"
     };
   },
   methods: {}
@@ -25,7 +26,8 @@ if (!Math) {
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
     a: common_vendor.p({
-      title: $data.title
+      title: $data.title,
+      backUrl: $data.backUrl
     }),
     b: common_vendor.f($data.childList, (item, k0, i0) => {
       return {};

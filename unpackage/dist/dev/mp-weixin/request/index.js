@@ -3,11 +3,15 @@ Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const common_vendor = require("../common/vendor.js");
 const request_first = require("./first.js");
 common_vendor.index.$u.http.setConfig((config) => {
-  config.baseURL = "https://www.example.com";
+  config.baseURL = "https://124.221.52.24:20235";
   return config;
 });
 common_vendor.index.$u.http.interceptors.request.use((config) => {
+  var _a;
   config.data = config.data || {};
+  if ((_a = config == null ? void 0 : config.custom) == null ? void 0 : _a.auth) {
+    config.header.token = common_vendor.index.getStorageSync("token");
+  }
   return config;
 }, (config) => {
   return Promise.reject(config);
@@ -32,3 +36,4 @@ common_vendor.index.$u.http.interceptors.response.use((response) => {
   return Promise.reject(response);
 });
 exports.getHttp = request_first.getHttp;
+exports.login = request_first.login;

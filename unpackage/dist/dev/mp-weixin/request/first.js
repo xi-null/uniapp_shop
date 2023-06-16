@@ -4,6 +4,8 @@ const http = common_vendor.index.$u.http;
 const getHttp = () => {
   return http;
 };
-const login = (params, config = {}) => http.post("/api/user/login", params, config);
+const login = (data) => {
+  return http.post("/api/user/login", { code: data });
+};
 exports.getHttp = getHttp;
 exports.login = login;

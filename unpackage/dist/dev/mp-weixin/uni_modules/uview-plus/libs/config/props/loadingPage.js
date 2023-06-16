@@ -1,8 +1,7 @@
 "use strict";
 const LoadingPage = {
-  // loading-page组件
   loadingPage: {
-    loadingText: "正在加载",
+    loadingText: "\u6B63\u5728\u52A0\u8F7D",
     image: "",
     loadingMode: "circle",
     loading: false,

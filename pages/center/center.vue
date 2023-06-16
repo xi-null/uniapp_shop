@@ -67,6 +67,7 @@
 						console.log(event.code)
 						//客户端成功获取授权临时票据（code）,向业务服务器发起登录请求。
 						
+
 						uni.request({
 							header: {
 								'Content-Type': 'application/x-www-form-urlencoded'

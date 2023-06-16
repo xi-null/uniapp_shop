@@ -3,9 +3,7 @@ const common_vendor = require("../../common/vendor.js");
 const _sfc_main = {
   data() {
     return {
-      title: "子女资料",
-      //顶部导航栏标题
-      //子女信息列表数组
+      title: "\u5B50\u5973\u8D44\u6599",
       childList: [
         1,
         2
@@ -34,5 +32,5 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   };
 }
-const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "D:/projects/uniapp_shop/uniapp_shop/pages/child_information/child_information.vue"]]);
+const MiniProgramPage = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["render", _sfc_render], ["__file", "D:/\u524D\u7AEF/uni-app/uniapp_shop/pages/child_information/child_information.vue"]]);
 wx.createPage(MiniProgramPage);

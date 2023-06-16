@@ -1,6 +1,5 @@
 "use strict";
 const Overlay = {
-  // overlay组件
   overlay: {
     show: false,
     zIndex: 10070,

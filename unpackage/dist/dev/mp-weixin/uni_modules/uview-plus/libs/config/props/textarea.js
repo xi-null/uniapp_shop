@@ -1,6 +1,5 @@
 "use strict";
 const Textarea = {
-  // textarea 组件
   textarea: {
     value: "",
     placeholder: "",

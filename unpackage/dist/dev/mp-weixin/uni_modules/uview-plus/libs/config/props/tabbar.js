@@ -1,6 +1,5 @@
 "use strict";
 const Tabbar = {
-  // tabbar
   tabbar: {
     value: null,
     safeAreaInsetBottom: true,

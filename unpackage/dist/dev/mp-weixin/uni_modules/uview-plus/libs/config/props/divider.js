@@ -1,6 +1,5 @@
 "use strict";
 const Divider = {
-  // divider组件
   divider: {
     dashed: false,
     hairline: true,

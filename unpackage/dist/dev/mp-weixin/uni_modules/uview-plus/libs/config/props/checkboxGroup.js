@@ -1,6 +1,5 @@
 "use strict";
 const CheckboxGroup = {
-  // checkbox-group组件
   checkboxGroup: {
     name: "",
     value: () => [],

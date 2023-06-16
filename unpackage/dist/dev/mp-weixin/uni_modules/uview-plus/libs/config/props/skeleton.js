@@ -1,6 +1,5 @@
 "use strict";
 const Skeleton = {
-  // skeleton
   skeleton: {
     loading: true,
     animate: true,

@@ -1,6 +1,5 @@
 "use strict";
 const IndexList = {
-  // indexList 组件
   indexList: {
     inactiveColor: "#606266",
     activeColor: "#5677fc",

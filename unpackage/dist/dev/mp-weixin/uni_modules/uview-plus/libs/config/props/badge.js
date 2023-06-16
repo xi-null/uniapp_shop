@@ -1,6 +1,5 @@
 "use strict";
 const Badge = {
-  // 徽标数组件
   badge: {
     isDot: false,
     value: "",

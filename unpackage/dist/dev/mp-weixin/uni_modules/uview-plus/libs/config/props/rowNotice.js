@@ -1,6 +1,5 @@
 "use strict";
 const RowNotice = {
-  // rowNotice
   rowNotice: {
     text: "",
     icon: "volume",

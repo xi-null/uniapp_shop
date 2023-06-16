@@ -1,32 +1,29 @@
 "use strict";
 const Calendar = {
-  // calendar 组件
   calendar: {
-    title: "日期选择",
+    title: "\u65E5\u671F\u9009\u62E9",
     showTitle: true,
     showSubtitle: true,
     mode: "single",
-    startText: "开始",
-    endText: "结束",
+    startText: "\u5F00\u59CB",
+    endText: "\u7ED3\u675F",
     customList: () => [],
     color: "#3c9cff",
     minDate: 0,
     maxDate: 0,
     defaultDate: null,
     maxCount: Number.MAX_SAFE_INTEGER,
-    // Infinity
     rowHeight: 56,
     formatter: null,
     showLunar: false,
     showMark: true,
-    confirmText: "确定",
-    confirmDisabledText: "确定",
+    confirmText: "\u786E\u5B9A",
+    confirmDisabledText: "\u786E\u5B9A",
     show: false,
     closeOnClickOverlay: false,
     readonly: false,
     showConfirm: true,
     maxRange: Number.MAX_SAFE_INTEGER,
-    // Infinity
     rangePrompt: "",
     showRangePrompt: true,
     allowSameDay: false,

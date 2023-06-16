@@ -1,6 +1,5 @@
 "use strict";
 const GormItem = {
-  // formItem 组件
   formItem: {
     label: "",
     prop: "",

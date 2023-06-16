@@ -1,6 +1,5 @@
 "use strict";
 const Popup = {
-  // popup组件
   popup: {
     show: false,
     overlay: true,

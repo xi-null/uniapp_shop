@@ -1,6 +1,5 @@
 "use strict";
 const RadioGroup = {
-  // radio-group组件
   radioGroup: {
     value: "",
     disabled: false,

@@ -1,6 +1,5 @@
 "use strict";
 const TabbarItem = {
-  //
   tabbarItem: {
     name: null,
     icon: "",

@@ -1,6 +1,5 @@
 "use strict";
 const AvatarGroup = {
-  // avatarGroup 组件
   avatarGroup: {
     urls: () => [],
     maxCount: 5,

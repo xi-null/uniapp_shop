@@ -2,8 +2,12 @@
 Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
 const common_vendor = require("../common/vendor.js");
 const request_first = require("./first.js");
+const request_second = require("./second.js");
 common_vendor.index.$u.http.setConfig((config) => {
-  config.baseURL = "https://124.221.52.24:20235";
+  config.baseURL = "http://124.221.52.24:20235";
+  config.header = {
+    "Content-Type": "application/x-www-form-urlencoded"
+  };
   return config;
 });
 common_vendor.index.$u.http.interceptors.request.use((config) => {
@@ -37,3 +41,5 @@ common_vendor.index.$u.http.interceptors.response.use((response) => {
 });
 exports.getHttp = request_first.getHttp;
 exports.login = request_first.login;
+exports.qaListAPI = request_second.qaListAPI;
+exports.voiceToTextAPI = request_second.voiceToTextAPI;

@@ -1,5 +1,5 @@
 "use strict";
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
+Object.defineProperties(exports, { __esModule: { value: true }, [Symbol.toStringTag]: { value: "Module" } });
 const common_vendor = require("./common/vendor.js");
 const uni_modules_uviewPlus_index = require("./uni_modules/uview-plus/index.js");
 require("./uni_modules/uview-plus/libs/mixin/mixin.js");
@@ -140,13 +140,15 @@ const _sfc_main = {
     console.log("App Hide");
   }
 };
-const App = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "D:/projects/uniapp_shop/uniapp_shop/App.vue"]]);
+const App = /* @__PURE__ */ common_vendor._export_sfc(_sfc_main, [["__file", "D:/\u524D\u7AEF/uni-app/uniapp_shop/App.vue"]]);
 const Tababr = () => "./components/Tabbar/Tabbar.js";
+const List = () => "./components/List/List.js";
 function createApp() {
   const app = common_vendor.createSSRApp(App);
   "./request/index.js";
   app.component("Tabbar", Tababr);
   app.use(uni_modules_uviewPlus_index.uviewPlus);
+  app.use("List", List);
   return {
     app
   };

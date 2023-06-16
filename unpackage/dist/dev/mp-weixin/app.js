@@ -132,6 +132,37 @@ if (!Math) {
 const _sfc_main = {
   onLaunch: function() {
     console.log("App Launch");
+    common_vendor.index.login({
+      "provider": "weixin",
+      "onlyAuthorize": true,
+      success: function(event) {
+        console.log(event.code);
+        common_vendor.index.request({
+          header: {
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          url: "http://124.221.52.24:20235/api/user/login",
+          data: {
+            code: event.code
+          },
+          method: "POST",
+          success: (res) => {
+            console.log(res);
+            common_vendor.index.setStorageSync("accessToken", res.data.item.accessToken);
+            common_vendor.index.setStorageSync("userId", res.data.item.userId);
+            common_vendor.index.setStorageSync("refreshToken", res.data.item.refreshToken);
+            common_vendor.index.setStorageSync("openid", res.data.item.openid);
+            common_vendor.index.setStorageSync("nickname", res.data.item.nickname);
+          },
+          fail() {
+            console.log("\u8BF7\u6C42\u5931\u8D25");
+          }
+        });
+      },
+      fail: function(err) {
+        console.log("\u767B\u5F55\u5931\u8D25");
+      }
+    });
   },
   onShow: function() {
     console.log("App Show");

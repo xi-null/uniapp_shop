@@ -39,5 +39,6 @@
   "permission": {},
   "usingComponents": {
     "tabbar": "/components/Tabbar/Tabbar"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

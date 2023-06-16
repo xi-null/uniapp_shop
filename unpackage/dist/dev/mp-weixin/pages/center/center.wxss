@@ -1,0 +1,75 @@
+.center_wrap {
+  height: 90vh;
+}
+.name {
+  padding-left: 90rpx;
+  margin-top: 118rpx;
+  padding-bottom: 17rpx;
+  height: 60rpx;
+  font-size: 46rpx;
+  font-weight: bold ;
+  line-height: 60rpx;
+  letter-spacing: 0rpx;
+  color: #000000;
+}
+.limit_box {
+  width: 692rpx;
+  height: 244rpx;
+  margin-left: 29rpx;
+  background-color: #ff9335;
+  box-shadow: 0rpx 10rpx 15rpx 0rpx rgba(0, 0, 0, 0.16);
+  border-radius: 60rpx;
+  color: #ffffff;
+}
+.limit_box .limit_num_box {
+  margin-left: 62rpx;
+  padding-top: 37rpx;
+  display: flex;
+}
+.limit_box .limit_num_box .limit_num_content {
+  font-size: 38rpx ;
+}
+.limit_box .limit_num_box .limit_num_button {
+  width: 156rpx;
+  height: 58rpx;
+  line-height: 58rpx;
+  background-color: #ffffff;
+  border-radius: 25rpx;
+  border: solid 2rpx #ffffff;
+}
+.limit_box .nickName {
+  margin-left: 62rpx;
+  margin-top: 13rpx;
+}
+.list {
+  height: 721rpx;
+  margin-left: 29rpx;
+}
+.list .list_item {
+  display: flex;
+  width: 692rpx;
+  height: 96rpx;
+  margin-top: 29rpx;
+  background-color: #ffffff;
+  box-shadow: 0rpx 10rpx 15rpx 0rpx rgba(0, 0, 0, 0.16);
+  border-radius: 60rpx;
+}
+.list .list_item .listName {
+  width: 510rpx;
+  height: 40rpx;
+  font-size: 31rpx;
+  color: #000000;
+  padding-left: 29rpx;
+  padding-top: 29rpx;
+}
+.list .list_item .icon_css {
+  margin-top: 33rpx;
+  margin-left: 56rpx;
+  width: 29rpx;
+  height: 35rpx;
+}
+.list .list_item .goIcon_css {
+  width: 29rpx;
+  height: 44rpx;
+  margin-top: 25rpx;
+}

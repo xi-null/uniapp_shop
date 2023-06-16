@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents": {
+    "u-picker": "../../uni_modules/uview-plus/components/u-picker/u-picker",
+    "list": "../../components/List/List",
+    "tabbar": "../../components/Tabbar/Tabbar"
+  }
+}

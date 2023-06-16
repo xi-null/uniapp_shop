@@ -31,7 +31,7 @@
 </template>
 
 <script>
-	import {login} from '../../request/index.js'
+	// import {login} from '../../request/index.js'
 	export default {
 		onLoad() {
 			console.log(1)

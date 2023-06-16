@@ -1,1 +1,0 @@
-<navigator wx:if="{{a}}" u-i="bc1864c8-0" bind:__l="__l" u-p="{{a}}"></navigator><view class="question_wra"><view class="message"><view class="queston"></view><view class="answer"></view></view><view class="icon" bindlongpress="{{b}}" bindtouchend="{{c}}"><image src="/static/img/record.svg"></image><view class="text">按住说话语音问题</view></view></view>

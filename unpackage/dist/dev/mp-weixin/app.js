@@ -128,6 +128,8 @@ if (!Math) {
   "./pages/motivate_invite/motivate_invite.js";
   "./pages/report/report.js";
   "./pages/feedback/feedback.js";
+  "./pages/Historical_orders/Historical_orders.js";
+  "./pages/pay/pay.js";
 }
 const _sfc_main = {
   onLaunch: function() {
@@ -165,6 +167,7 @@ const _sfc_main = {
     });
   },
   onShow: function() {
+    common_vendor.index.hideTabBar();
     console.log("App Show");
   },
   onHide: function() {

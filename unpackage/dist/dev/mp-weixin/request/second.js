@@ -7,5 +7,7 @@ const qaListAPI = ({ userId, checkAdult, page, size }) => {
 const voiceToTextAPI = (fileUrl) => http.post("/api/qa/audio2text", {
   file: fileUrl
 });
+const codeAPI = (userId) => http.get(`/api/invitation/info/${userId}`);
+exports.codeAPI = codeAPI;
 exports.qaListAPI = qaListAPI;
 exports.voiceToTextAPI = voiceToTextAPI;

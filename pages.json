@@ -81,6 +81,26 @@
             }
             
         }
+        ,{
+            "path" : "pages/Historical_orders/Historical_orders",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+            }
+            
+        }
+        ,{
+            "path" : "pages/pay/pay",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+					"navigationStyle": "custom"
+            }
+            
+        }
     ],
 	"globalStyle": {
 		

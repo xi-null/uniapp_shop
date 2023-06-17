@@ -29,6 +29,89 @@
   background-color: #f4f4f4;
   overflow: hidden;
 }
+.question_wra .list {
+  width: 100vw;
+  height: 75vh;
+  margin-top: 113rpx;
+  overflow: scroll;
+}
+.question_wra .list .question {
+  display: flex;
+  justify-content: flex-end;
+}
+.question_wra .list .question .text {
+  width: 431rpx;
+  padding: 13px;
+  min-height: 138rpx;
+  margin-right: 29rpx;
+  background-color: #ffffff;
+  box-shadow: 0rpx 0rpx 19rpx 0rpx rgba(0, 0, 0, 0.16);
+  border-radius: 60rpx;
+}
+.question_wra .list .question .text .content {
+  font-family: Microsoft YaHei;
+  font-size: 31rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 40rpx;
+  letter-spacing: 0rpx;
+  color: #000000;
+}
+.question_wra .list .question .text .time {
+  display: flex;
+  justify-content: flex-end;
+  font-family: Microsoft YaHei;
+  font-size: 19rpx;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 27rpx;
+  letter-spacing: 0rpx;
+  color: #000000;
+  margin-right: 29rpx;
+}
+.question_wra .list .question .img {
+  width: 396rpx;
+  height: 138rpx;
+  background-color: #ffffff;
+  box-shadow: 0rpx 0rpx 19rpx 0rpx rgba(0, 0, 0, 0.16);
+  border-radius: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.question_wra .list .question .img image {
+  width: 200rpx;
+  height: 100rpx;
+}
+.question_wra .list .answer {
+  display: flex;
+  justify-content: flex-start;
+}
+.question_wra .list .answer .text {
+  width: 458rpx;
+  min-height: 254rpx;
+  background-color: #ff9335;
+  box-shadow: 0rpx 0rpx 19rpx 0rpx rgba(0, 0, 0, 0.16);
+  border-radius: 60rpx;
+  padding: 13px;
+  margin-top: 133rpx;
+  color: white;
+  margin-left: 29rpx;
+}
+.question_wra .list .answer .img {
+  width: 235rpx;
+  height: 98rpx;
+  background-color: #ff9335;
+  box-shadow: 0rpx 0rpx 19rpx 0rpx rgba(0, 0, 0, 0.16);
+  border-radius: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.question_wra .list .answer .img image {
+  width: 200rpx;
+  height: 100rpx;
+}
 .question_wra .icon {
   display: flex;
   flex-direction: column;

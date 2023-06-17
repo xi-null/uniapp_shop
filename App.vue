@@ -42,6 +42,7 @@
 				})
 		},
 		onShow: function() {
+			uni.hideTabBar()
 			console.log('App Show')
 		},
 		onHide: function() {

@@ -4,7 +4,7 @@
 		<view class="limit_box">
 			<view class="limit_num_box">
 				<view class="limit_num_content">剩余额度：10000000000</view>
-				<button class="limit_num_button">充值</button>
+				<button class="limit_num_button" @click="goPage('/pages/pay/pay')">充值</button>
 			</view>
 			<view class="nickName">
 				昵称1：

@@ -8,7 +8,9 @@
     "pages/Invitation_code/Invitation_code",
     "pages/motivate_invite/motivate_invite",
     "pages/report/report",
-    "pages/feedback/feedback"
+    "pages/feedback/feedback",
+    "pages/Historical_orders/Historical_orders",
+    "pages/pay/pay"
   ],
   "window": {
     "navigationBarTextStyle": "black",
@@ -39,6 +41,5 @@
   "permission": {},
   "usingComponents": {
     "tabbar": "/components/Tabbar/Tabbar"
-  },
-  "sitemapLocation": "sitemap.json"
+  }
 }

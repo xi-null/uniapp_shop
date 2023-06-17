@@ -37,7 +37,8 @@ if (!Math) {
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return {
     a: common_vendor.t($data.nickName),
-    b: common_vendor.f($data.itemList, (item, index, i0) => {
+    b: common_vendor.o(($event) => $options.goPage("/pages/pay/pay")),
+    c: common_vendor.f($data.itemList, (item, index, i0) => {
       return {
         a: item.imgUrl,
         b: common_vendor.t(item.label),
@@ -45,7 +46,7 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
         d: item.index
       };
     }),
-    c: common_vendor.p({
+    d: common_vendor.p({
       selected: $data.selected
     })
   };

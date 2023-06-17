@@ -9,3 +9,7 @@ export const qaListAPI = ({userId,checkAdult,page,size}) =>{
 export const voiceToTextAPI = (fileUrl)=>http.post('/api/qa/audio2text',{
 	file:fileUrl
 })
+
+//获取邀请码
+
+export const codeAPI = (userId)=>http.get(`/api/invitation/info/${userId}`)

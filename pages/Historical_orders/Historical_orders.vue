@@ -15,11 +15,11 @@
 			</view>
 			<view class="number">
 				<view class="title">总人数：{{invideInfo.inviteNum}}</view>
-				<view>0</view>
+				
 			</view>
 			<view class="price">
 				<view class="title">总收益：{{invideInfo.inviteTotalProfit}}</view>
-				<view>0</view>
+				
 			</view>
 			<view class="waitTitle">未提现总额:</view>
 			<view class="wait">
@@ -41,10 +41,10 @@
 			return {
 				userId: uni.getStorageSync('userId'),
 				invideInfo: {
-					inviteCode: 0,
-					inviteNum: 0,
-					inviteTotalProfit: 0,
-					inviteBalance: 0
+					inviteCode: '',
+					inviteNum: '',
+					inviteTotalProfit: '',
+					inviteBalance: ''
 				},
 			};
 		},
@@ -57,7 +57,7 @@
 			async getCode() {
 				let result = await codeAPI(this.userId)
 				this.invideInfo = result.item
-				console.log(this.invideInfo, result)
+				console.log(this.invideInfo)
 			},
 			//复制
 			copy() {
@@ -78,6 +78,7 @@
 
 
 			},
+		
 			//发起提现
 			income(){
 			
@@ -88,6 +89,8 @@
 					success: function (res) {
 						if (res.confirm) {
 							console.log('用户点击确定');
+							
+								
 							//判断金额大小后发起请求
 						} else if (res.cancel) {
 							console.log('用户点击取消');
@@ -211,7 +214,7 @@
 				line-height: 40rpx;
 				letter-spacing: 0rpx;
 				color: #000000;
-				margin-top: 3px;
+				margin-top: 10px;
 			}
 
 			.waitTitle {
@@ -223,6 +226,7 @@
 				line-height: 40rpx;
 				letter-spacing: 0rpx;
 				color: #000000;
+				margin-top: 10px;
 			}
 
 			.wait {

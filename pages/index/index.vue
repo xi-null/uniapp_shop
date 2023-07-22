@@ -20,62 +20,47 @@
 				<image src="../../static/img/scan.svg"></image>
 			</view>
 		</view>
-		<view class="list">
-			  <List :list="qaList"></List>
+		<view :class="{list:true,empty:qaList.length==0}">
+			  <List :list="qaList" @load="loadMore"  v-if="qaList.length>0"></List>
+			  <u-empty
+			          mode="history"
+			         class="empty"
+			  		v-else
+			  >
+			  </u-empty>
 		</view>
+	
 	    
 	</view>
 	<Tabbar :selected="selected"></Tabbar>
 </template>
 
 <script>
-	import {getHttp} from '../../request/index.js'
+	import {getHttp,getChildAPI,getQaAPI} from '../../request/index.js'
 	
 	export default {
 		data() {
 			return {
-				title: 'Hello',
 				selected:0,//导航栏选中
-				role:'角色1',  //角色
+				role:'暂无',  //角色
 				roleList:[
-					{nickname:"角色1",childId:0},
-					{nickname:'角色2',childId:1}
 				],  //角色列表
 				show:false, //角色选择
 				selectIcon:'../../static/img/go2.svg', //图片路径
-				qaList:[{
-                    "qaId": "string",
-                    "questionText": "阿斯顿撒旦阿萨大阿萨大撒赖扩大就撒旦卢卡斯离开洒家的立刻撒旦立刻爱上角度来看阿斯利康撒低级",
-                    "answerText": "阿斯顿金克拉阿斯兰的空间阿里山扩大啊离开洒家道路喀什的艰苦拉萨大家雷克萨角度来看撒阿",
-                    "askTime": "string",
-                    "answerTime": "string",
-                    "hasError": true,
-                    "errorMsg": "string"
-                },
-				{
-				    "qaId": "string",
-				    "questionText": "string",
-				    "answerText": "string",
-				    "askTime": "string",
-				    "answerTime": "string",
-				    "hasError": true,
-				    "errorMsg": "string"
-				},
-				{
-				    "qaId": "string",
-				    "questionText": "string",
-				    "answerText": "string",
-				    "askTime": "string",
-				    "answerTime": "string",
-				    "hasError": true,
-				    "errorMsg": "string"
-				}
+				pageObj:{
+					page:1,
+					size:3, 
+				}, //分页
+				qaList:[
+				
 				]
 			}
 		},
-		onLoad() {
+		async onLoad() {
 			uni.hideTabBar()
              console.log(this.selectList)
+			 await this.getChildList()
+			 await this.loadMore(1)
 		},
 		computed:{
 			//下拉框数据要求
@@ -88,16 +73,27 @@
 						
 					
 				})]
-			}
+			},
+		
 		},
 		methods: {
 			/***
 			 角色下拉框变换
 			***/
 			change(e){
+				 let childId = e.id 
+				 
 				
-				console.log(e)
-				
+			},
+			//获取角色
+			async getChildList(){
+				let parentId = uni.getStorageSync('userId')
+				let res = await getChildAPI(parentId)
+				this.roleList = res.item.children
+				this.role = this.roleList[0].nickname
+				if(this.roleList.length==0){
+					this.role='暂无'
+				}
 			},
 			confirm(e){
 					console.log(e.value[0],'role')
@@ -115,6 +111,14 @@
 					}
 				});
 
+			},
+			async loadMore(page){
+				console.log(this.roleList,'load')
+				let userId = this.roleList.find(item=>item.nickname==this.role).childId
+				//子组件发布更新事件
+				let res = await getQaAPI({userId,page,size:3})
+				
+				
 			}
 			
 
@@ -215,6 +219,12 @@
 					margin: auto;
 					overflow: scroll;
 					
+				
+			}
+			.empty{
+				display: flex;
+				align-items: center;
+				justify-content: center;
 			}
 	}
 

@@ -3,13 +3,13 @@
 	<view class="question_wra">
 		<view class="list">
 			<view  v-for="(item,key) in list" :key="index" :class="{question:item.type==0,answer:item.type==1}">
-				<view class="text" v-if="isEnd">
+				<view class="text" v-if="item.isEnd">
 					<view class="content">{{item.text}}</view>
 					<view class="time">{{item.time}}</view>
 					
 				</view>
 				<view class="img" v-else>
-						<image :src="type==0?'../../static/img/radio.gif':'../../static/img/radio.gif'" ></image>
+						<image :src="item.type==0?'../../static/img/radio.gif':'../../static/img/dot.gif'" ></image>
 				</view>
 			
 			
@@ -43,8 +43,8 @@
 				list:[
 				
 				], //消息列表
-				isEnd:false, //全局加载表示
-				index:0. //消息列表标识
+			    
+					index:0 //消息列表标识
 
 			};
 		},
@@ -72,8 +72,13 @@
 				// 	},
 				// })
 				//语音转文字之后
-				this.list[this.index].text = '问题日撒旦撒旦sad'
-				this.isEnd = true
+			
+					this.isNext = false
+					this.list[this.index].text = '问题日撒旦撒旦sad'
+					this.list[this.index].isEnd = true
+					
+				
+				
 				
 
 			});
@@ -87,6 +92,7 @@
 				let obj = {
 					type:0,
 					text:'',
+					isEnd:false
 				}
 				this.list.push(obj)
 				this.index = this.list.length-1
@@ -96,6 +102,21 @@
 			endRecord() {
 				console.log('end')
 				this.recordManager.stop()
+				let obj = {
+					type:1,
+					text:'啊实打实阿三阿萨大撒旦',
+					isEnd:false
+				}
+				this.list.push(obj)
+				
+				setTimeout(()=>{
+				
+					this.index = this.list.length-1
+					this.list[this.index].text = '问题日撒旦撒旦sad'
+					this.list[this.index].isEnd = true
+				},2000)
+				
+				
 				
 			},
 			//拿录音去获取回答
@@ -171,6 +192,7 @@
 					}
 				   
 			   }
+			
 		   }
 		   .answer{
 			   display: flex;
@@ -198,8 +220,8 @@
 					justify-content: center;
 					align-items: center;
 					image{
-							width: 200rpx;
-							height: 100rpx;
+							width: 150rpx;
+								height: 100rpx;
 					}
 			   }
 		   }

@@ -1,55 +1,88 @@
 <template>
 	<view class="child_information_wrap">
 		<Navigator :title="title" :backUrl="backUrl"></Navigator>
-		<view v-for="item in childList">
-			<view class="title">
-				<view class="title_content">
-					已绑定子女
-				</view>
-				<button class="modify">修改</button>
-			</view>	
-			<view class="child_information_detail">
-				<view class="child_information_list">
-					<view class="nickName">
-						昵称：
+		<view class="list_wra">
+			<view v-for="item in childList" >
+				<view class="title">
+					<view class="title_content">
+						已绑定子女
 					</view>
-					<view class="gender">
-						性别：
-					</view>
-					<view class="age">
-						年龄：
-					</view>
-					<view class="school">
-						学校：
-					</view>
-					<view class="grade">
-						年级：
+					<button class="modify" @click="toUpdate(item.childId)">修改</button>
+				</view>	
+				<view class="child_information_detail">
+					<view class="child_information_list">
+						<view class="nickName">
+							昵称：{{item.nickname}}
+						</view>
+						<view class="gender">
+							性别：{{item.gender}}
+						</view>
+						<view class="age">
+							年龄：{{item.age}}
+						</view>
+						<view class="school">
+							学校：{{item.school}}
+						</view>
+						<view class="grade">
+							年级：{{item.grade}}
+						</view>
 					</view>
 				</view>
 			</view>
 		</view>
-		<view class="add_wrap">
+	
+		<view class="add_wrap" @click="toAdd">
 			<img src="../../static/img/add.svg" alt="" class="add_img">
-			<view class="add_content">
+			<view class="add_content" >
 				添加
 			</view>
 		</view>
+		
 	</view>
 </template>
 
 <script>
+	import {getChildAPI} from '../../request/index.js'
 	export default {
 		data() {
 			return {
 				title:"子女资料",//顶部导航栏标题
 				//子女信息列表数组
 				childList:[
-					1,2
+					1,2,3,4,5
 				],
-				backUrl:'/pages/center/center'
+				backUrl:'/pages/center/center',
+			
 			}
 		},
+		onLoad(){
+			this.getList()
+			console.log(this.childList)
+		},
 		methods: {
+			toAdd(){
+				uni.navigateTo({
+					url:'/pages/addChild/addChild'
+				})
+				
+			},
+			//修改
+			toUpdate(childId){
+			uni.navigateTo({
+				url:`/pages/updateChild/updateChild?childId=${childId}`,
+				
+			})
+				
+				
+			},
+			async getList(){
+				let res = await getChildAPI(uni.getStorageSync('userId'))
+				if(res.success){
+					this.childList = res.item.children
+				}
+				
+				
+			}
 			
 		}
 	}
@@ -59,6 +92,11 @@
 	.child_information_wrap {
 		background-color: #f8f8f8;
 		height: 100vh;
+		.list_wra{
+			height: 68vh;
+			overflow: scroll;
+			padding-bottom: 20px;
+		}
 	}
 	.title{
 		display: flex;
@@ -105,7 +143,7 @@
 	.add_wrap {
 		width: 88rpx;
 		height: 88rpx;
-		margin-top: 200rpx;
+		margin-top: 100rpx;
 		margin-left: 331rpx;
 		border-radius: 50%;
 		background-color: #ffffff;	

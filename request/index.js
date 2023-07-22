@@ -50,7 +50,7 @@ uni.$u.http.interceptors.response.use((response) => { /* 对响应成功做点�
     // }
 	//如果不成功
 	if(!data.success){
-		uni.$u.toast(data.message)
+		uni.$u.toast(data.errMsg)
 	}
     return data
 }, (response) => { 

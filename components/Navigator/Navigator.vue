@@ -34,9 +34,18 @@
 		methods:{
 			//跳转回原来的页面
 			goBack(){
-				uni.switchTab({
-					url: this.backUrl
-				});
+				 if(this.backUrl=='/pages/center/center'||this.backUrl=='/pages/index/index'){
+					 uni.switchTab({
+					 	url: this.backUrl
+					 })
+					 				
+					 return 
+				 }
+				 uni.navigateTo({
+				 	url:this.backUrl
+				 })
+				
+			
 			}
 		}
 	}
